@@ -1,0 +1,264 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #0d1b2a, #1b263b);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Navigation Bar */
+nav {
+    background: #1b263b;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    background: #ff9800;
+    color: #121212;
+    transform: scale(1.1);
+}
+
+/* Home Section */
+.home-section {
+    background: url('dark-web-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.home-overlay {
+    background: rgba(13, 27, 42, 0.8);
+    padding: 60px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.home-section h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.home-section p {
+    font-size: 22px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff9800;
+    color: #121212;
+    padding: 12px 24px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e65100;
+}
+
+/* Sections */
+section {
+    padding: 50px;
+    background: #1e1e1e;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 900px;
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+/* Vision & Mission */
+#vision-mission h2 {
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+#vision-mission p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* About Section */
+.about-section {
+    background: #2c2c2c;
+    padding: 40px;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Services Section */
+#services ul {
+    list-style: none;
+    padding: 0;
+}
+
+#services ul li {
+    font-size: 18px;
+    background: #1b263b;
+    color: white;
+    padding: 12px;
+    margin: 6px 0;
+    border-radius: 6px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#services ul li:hover {
+    transform: scale(1.05);
+    background: #ff9800;
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: #2c2c2c;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #1b263b;
+    color: white;
+    font-size: 16px;
+}
+
+#contact button {
+    padding: 10px 20px;
+    background: #ff9800;
+    border: none;
+    color: #121212;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contact button:hover {
+    background: #e65100;
+}
+
+/* Footer */
+footer {
+    background-color: #0d1b2a;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+form {
+  background-color: #1f1f1f;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  color: #ffa500;
+  margin-bottom: 20px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+}
+
+button {
+  background-color: #ffa500;
+  color: #000;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e69500;
+}
+
+#status {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}

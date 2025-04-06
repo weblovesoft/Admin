@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weblovesoft - Web Designing & Hosting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Weblovesoft Logo" class="logo">
+        <h1>Weblovesoft</h1>
+	<h2>Client Details</h2>
+    </header>
+    
+    <nav>
+        <ul>
+	    <li><a href="#contact">Tickets Queue</a></li>
+            <li><a href="Ticket.html">Open a Ticket</a></li>
+	    <li><a href="https://weblovesoft.github.io/Invoice/">Download Invoice</a></li>
+	    <li><a href="https://docs.google.com/spreadsheets/d/1I4UAUtpurqEjxGvdu039m_cZBqsxX77leKAA_4qy0Vo/edit?gid=0#gid=0">Client Followup</a></li>
+	    
+        </ul>
+    </nav>
+<section id="contact">
+  <p>Enter New Client Details</p>
+  <form id="clientForm">
+    <input type="text" name="company" placeholder="Company Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="text" name="address" placeholder="Address" required>
+    <button type="submit">Submit</button>
+  </form>
+  <p id="statusMsg"></p>
+</section>
+
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbxr6fDmQyUQtogFgfLjzl2zms535-ESFCiW7avnzdyeycvV1N25GlrYSgcUNsxcRRCN/exec"; // Replace with your real URL
+  const form = document.getElementById("clientForm");
+  const statusMsg = document.getElementById("statusMsg");
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const urlParams = new URLSearchParams(formData);
+
+    fetch(scriptURL, {
+      method: "POST",
+      body: urlParams,
+      mode: "no-cors"
+    })
+    .then(() => {
+      form.reset();
+      statusMsg.textContent = "✅ Submitted!";
+      form.reset();
+    })
+    .catch(error => {
+      statusMsg.textContent = "❌ Submission failed.";
+      console.error("Error!", error.message);
+    });
+  });
+</script>
+
+</body>
+</html>

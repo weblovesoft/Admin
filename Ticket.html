@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ticket Form</title>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weblovesoft - Web Designing & Hosting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <header>
+        <img src="logo.png" alt="Weblovesoft Logo" class="logo">
+        <h1>Weblovesoft</h1>
+	<h2>Client Details</h2>
+    </header>
+    
+    <nav>
+        <ul>
+	    <li><a href="https://docs.google.com/spreadsheets/d/1Tx0x_PBeoR30RNa_Ulqb2R_oNpY32R0_baMwKb58GeM/edit?gid=0#gid=0">Tickets Queue</a></li>
+	    <li><a href="https://weblovesoft.github.io/Invoice/">Download Invoice</a></li>
+	    <li><a href="https://docs.google.com/spreadsheets/d/1I4UAUtpurqEjxGvdu039m_cZBqsxX77leKAA_4qy0Vo/edit?gid=0#gid=0">Client Followup</a></li>
+        </ul>
+    </nav>
+  <form id="ticket-form">
+    <h2>Create Ticket</h2>
+    <input type="text" name="Client Name" placeholder="Client Name" required />
+    <textarea name="Issue" placeholder="Describe the issue" required></textarea>
+    <select name="Status">
+      <option value="Open">Open</option>
+      <option value="Closed">Closed</option>
+    </select>
+    <input type="text" name="Assigned To" placeholder="Assigned To" required />
+    <textarea name="Follow-Up" placeholder="Follow-Up notes (optional)"></textarea>
+    <button type="submit">Submit</button>
+    <div id="status"></div>
+  </form>
+
+  <script>
+    const form = document.getElementById("ticket-form");
+    const statusDiv = document.getElementById("status");
+
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxJ9fhl0GhhW6wTpp6-sc1rJN23WhP9OW4orZFtrFfXfJVucAnq2jJDtH-uMzM0GBtaZg/exec";
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const encoded = new URLSearchParams(formData);
+
+      fetch(scriptURL, { method: "POST", body: encoded })
+        .then(() => {
+          form.reset();
+          statusDiv.textContent = "✅ Ticket submitted successfully!";
+        })
+        .catch(() => {
+          statusDiv.textContent = "❌ Error submitting ticket.";
+        });
+    });
+  </script>
+</body>
+</html>

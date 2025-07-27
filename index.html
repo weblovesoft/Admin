@@ -1,26 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weblovesoft - Web Designing & Hosting</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weblovesoft - Web Designing & Hosting</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Weblovesoft Logo" class="logo">
-        <h1>Weblovesoft</h1>
-    </header>
-    
-    <nav>
-        <ul>
-	    <li><a href="Ticket.html">Open a Ticket</a></li>
-	    <li><a href="https://docs.google.com/spreadsheets/d/1Tx0x_PBeoR30RNa_Ulqb2R_oNpY32R0_baMwKb58GeM/edit?gid=0#gid=0">Tickets Queue</a></li>
-	    <li><a href="https://weblovesoft.github.io/Invoice/">Download Invoice</a></li>
-	    <li><a href="Client-details.html">Submit Client Details</a></li>
-	    <li><a href="https://docs.google.com/spreadsheets/d/1I4UAUtpurqEjxGvdu039m_cZBqsxX77leKAA_4qy0Vo/edit?gid=0#gid=0">Client Followup</a></li>
-	    
+  <header>
+    <img src="logo.png" alt="Weblovesoft Logo" class="logo">
+    <h1>Weblovesoft</h1>
+    <h2>Your Website Partner for Life</h2>
+  </header>
+
+  <nav>
+    <ul>
+      <li class="dropdown">
+        <a href="#">Ticket Management ▼</a>
+        <ul class="dropdown-content">
+          <li><a href="Ticket.html">Open a Ticket</a></li>
+          <li><a href="https://docs.google.com/spreadsheets/d/1Tx0x_PBeoR30RNa_Ulqb2R_oNpY32R0_baMwKb58GeM/edit?gid=0#gid=0" target="_blank">Tickets Queue</a></li>
         </ul>
-    </nav>
+      </li>
+      <li class="dropdown">
+        <a href="#">Employee Management ▼</a>
+        <ul class="dropdown-content">
+          <li><a href="EmpDetails.html">Add a New Employee</a></li>
+          <li><a href="https://docs.google.com/spreadsheets/d/1kvImgYVrvHRg6wMERXAe_AjVVYSMLgQ2xZ-KngCDQz0/edit?gid=0#gid=0">View Employees</a></li>
+        </ul>
+      </li>
+      <li><a href="https://weblovesoft.github.io/Invoice/">Download Invoice</a></li>
+      <li class="dropdown">
+        <a href="#">Client Management ▼</a>
+        <ul class="dropdown-content">
+          <li><a href="Client-details.html">Submit Client Details</a></li>
+          <li><a href="https://docs.google.com/spreadsheets/d/1I4UAUtpurqEjxGvdu039m_cZBqsxX77leKAA_4qy0Vo/edit?gid=0#gid=0">Client Followup</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Important Links ▼</a>
+        <ul class="dropdown-content">
+          <li><a href="https://forms.gle/i4HCeSubF4fosPxw9" target="_blank">Client Website Details</a></li>
+          <li><a href="https://forms.gle/vAtNczYRUERSsomt9" target="_blank">Maintenance & Updates</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="home-section">
+    <div class="home-overlay">
+      <h2>Professional, Affordable, and Fast Website Solutions</h2>
+      <p>We build websites that grow your business. Whether you're a startup or a large enterprise, we have the perfect solution for you.</p>
+      <a href="Client-details.html" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <section id="vision-mission">
+    <h2>Our Vision & Mission</h2>
+    <p>At Weblovesoft, we envision a world where every business—no matter how small—has a powerful online presence. Our mission is to deliver websites that are fast, modern, and tailored to our clients’ goals. We are committed to affordability, reliability, and customer satisfaction.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>✔️ Website Designing (Static & Dynamic)</li>
+      <li>✔️ Domain & Hosting Setup</li>
+      <li>✔️ Client Dashboard & Ticket System</li>
+      <li>✔️ Maintenance & Regular Updates</li>
+      <li>✔️ Google Sheets Integration</li>
+      <li>✔️ Invoicing & Billing Systems</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Let’s Work Together!</h2>
+    <p>Click below to submit your website request or raise a support ticket.</p>
+    <a href="Client-details.html" class="btn">Submit Client Details</a>
+    <a href="Ticket.html" class="btn" style="margin-left: 10px;">Raise a Ticket</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Weblovesoft. All rights reserved. | Designed with ❤️ in India</p>
+  </footer>
 </body>
 </html>
